@@ -1,0 +1,57 @@
+/* Apply a natural box layout model to all elements [http://paulirish.com/2012/box-sizing-border-box-ftw/]
+/* Border-box polyfill for IE 6/7: [https://github.com/Schepp/box-sizing-polyfill#readme]
+*************************************************************************/
+html { box-sizing: border-box; }
+*, *:before, *:after {
+	box-sizing: inherit;
+	*behavior: url('../../site_scripts/boxsizing.htc');
+}
+
+
+/* General Rules and classes
+*************************************************************************/
+html {
+  background: #fff;
+  font-size: 1em;
+  font-family: $font-body;
+  color: $colour-primary;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  }
+
+body {
+  line-height: 1.4;
+  @include rem(padding-bottom, 50px);
+   }
+
+// Links
+a {
+	color: $colour-secondary;
+	font-weight: normal;
+	text-decoration: underline;
+	transition: background-color .3s ease-in-out;
+}
+
+	a:hover, a:focus, a:active {
+  	color: $colour-primary; text-decoration: none; }
+	a:focus { outline: thin dotted; background: $colour-secondary; color: #fff; }
+	a:hover, a:active { outline: 0; }
+
+	// Links inside images
+	a img:hover, a:focus img { @include opacity(0.8); }
+
+// Headings
+h1, h2, h3, h4, h5 { font-family: $font-heading; }
+
+h1 { @include font-size(52); font-weight: bold; line-height: 1.1; }
+h2 { @include font-size(20); font-weight: bold; }
+h3 { @include font-size(16); font-weight: bold; }
+h4 { @include font-size(16); }
+h5 { @include font-size(14); font-weight: bold; }
+
+// Text defaults
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+// Images
+img { vertical-align: bottom; max-width: 100%; }

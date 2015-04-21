@@ -1,0 +1,23 @@
+/* Auto float clearing
+*************************************************************************/
+.group:before,
+.group:after { content: ""; display: table; }
+.group:after { clear: both; }
+
+/* hasLayout fix for < IE8 */
+.lt-ie8 .group { zoom: 1; }
+
+/* Super classes
+*************************************************************************/
+.caps { text-transform: uppercase; }
+.sent { text-transform: capitalize; }
+.hide { display: none; }
+.last { margin-right: 0 !important; padding-right: 0 !important; }
+.list-clear { clear: both; }
+.screen-reader { display: block !important; left: -9999em !important; position: absolute !important; top: -9999em !important; }
+
+.font-body { font-family: $font-body; }
+.font-heading { font-family: $font-heading; }
+
+/* Accessibility */
+.accessible-offscreen { position:absolute; left:-10000em; }

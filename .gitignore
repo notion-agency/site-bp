@@ -1,0 +1,31 @@
+# LOCAL CONFIG SETTINGS
+# Exclude local config files so we don't overwrite other local setups.
+# Leave example files that can be copied to get setup
+# ------------------------------------------------------------
+/config/local/*
+!/config/local/db.example.php
+!/config/local/general.example.php
+craft/storage/runtime/*
+craft/storage/backups/*
+
+# MISC FILES
+# https://github.com/github/gitignore/tree/master/Global
+# ------------------------------------------------------------
+__data/*
+__downloads/*
+__scratchpad/*
+__sql/*
+*.esproj/*
+*.esproj
+.DS_Store
+.buildpath
+.project
+.settings/*
+log.htm
+log.txt
+public_html/error_log
+node_modules/*
+.sass-cache/*
+*.sublime-project
+*.sublime-workspace
+*.scssc
